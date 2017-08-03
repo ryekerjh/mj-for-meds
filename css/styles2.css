@@ -15,10 +15,9 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-
 header {
     background-image: url('../img/bg3.jpg');
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     height: 500px;
 }
@@ -55,6 +54,36 @@ header {
     margin-top: 10%;
 }
 
-.separator~h4 {
+.separator~h4, p {
     font-family: 'Raleway', cursive;
+}
+
+.testimony {
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 2px #e7e7e7;
+    padding: 24px;
+}
+
+/* MODAL STYLES */
+.modal {
+    padding-top: 8%;
+}
+
+.modal-body h4 {
+    line-height: 2.5em;
+    text-align: justify;
+}
+
+.close {
+    opacity: 0.6;
+}
+
+.build-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
