@@ -64,9 +64,21 @@ header {
     padding: 24px;
 }
 
+/* TRANSITION */
+
 /* MODAL STYLES */
 .modal {
     padding-top: 8%;
+    color: #9F925A;
+}
+
+.modal-body span {
+    color: #8CC63E;
+}
+
+.modal-body span:hover {
+    cursor: pointer;
+    color: #709E32;
 }
 
 .modal-body h4 {
@@ -76,14 +88,4 @@ header {
 
 .close {
     opacity: 0.6;
-}
-
-.build-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 1px solid #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

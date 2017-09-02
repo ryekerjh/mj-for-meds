@@ -3,10 +3,7 @@
     var loadFn = function() {
         window.onload = function() {
             var modal = document.getElementById("loadModal");
-            // modal.style.display = "block";
-            // modal.style.marginLeft = "0px";
-          $('#loadModal').modal('show')
-            // modal.classList.toggle("appear");
+          $('#loadModal').modal('show');
         }  
     }  
     var testArr = [
@@ -36,23 +33,59 @@
             custSince: '2016'
         }];
         
-    var interval = function() {
+
+
+    $("#testimony").mouseenter(function(){
+        return stopSlider();
+   });
+
+   var interval = function() {
+        switchOut();
         setInterval(function(){ 
-            switchOut(); 
+            if(switchOut != null) {
+                switchOut(); 
+            } else {
+                return
+            }
         }, 10000);
     }
 
-    var switchOut = function() {
-        // testArr.shift();
-        var testimonies = document.getElementById("testimonies");
-        var author = document.getElementById("author");
-        var custSince = document.getElementById("custSince");
+   $("#testimony").mouseleave(function(){
+    switchOut = function() {  
         var ran = testArr[Math.floor(Math.random() * testArr.length)];
-        testimonies.innerHTML = ran.story;
-        author.innerHTML = ran.author;
-        custSince.innerHTML = ran.custSince;
+            $('#testimonies').hide().html(ran.story).fadeIn(900, 'swing');
+            $('#author').hide().html(ran.author).fadeIn(900, 'swing');
+            $('#custSince').hide().html(ran.custSince).fadeIn(900, 'swing');
+        }
+    });
+
+    var switchOut = function() {
+        if(switchOut != null) {
+            var ran = testArr[Math.floor(Math.random() * testArr.length)];
+            $('#testimonies').hide().html(ran.story).fadeIn(900, 'swing');
+            $('#author').hide().html(ran.author).fadeIn(900, 'swing');
+            $('#custSince').hide().html(ran.custSince).fadeIn(900, 'swing');
+        } else {
+            console.log('huvrin');
+        }
+    }
+
+    function stopSlider() {
+        switchOut = null;
     }
 
     interval();
+    switchOut();    
     loadFn();
+    new Clipboard('#email');
+    $('[data-toggle="tooltip"]').tooltip()    
+    
 })();
+
+var summonTooltip = function() {
+    $('#email').tooltip('show')
+    .attr('data-original-title', 'Copied!')
+    .tooltip('fixTitle')
+    .tooltip('show');
+}
+
