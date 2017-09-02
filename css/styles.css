@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway');
+
+/* UNIVERSALS */
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #e7e7e7;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    background-image: url('../img/bg3.jpg');
+    background-position: bottom;
+    background-size: cover;
+    height: 500px;
+}
+
+.design-select {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.testimony-section {
+    min-height: 650px;
+}
+
+.heading {
+    margin-top: 10%;
+    color: #fff;
+}
+
+.heading h2 {
+    font-size: 4em;
+}
+
+.heading h3 {
+    margin-top: 0;
+}
+
+.separator {
+    color: #333;
+    height: 3px;
+}
+
+.separator:first-child {
+    margin-top: 10%;
+}
+
+.separator~h4, p {
+    font-family: 'Raleway', cursive;
+}
+
+.testimony {
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 2px #e7e7e7;
+    padding: 24px;
+}
+
+/* TRANSITION */
+
+/* MODAL STYLES */
+.modal {
+    padding-top: 8%;
+    color: #9F925A;
+}
+
+.modal-body span {
+    color: #8CC63E;
+}
+
+.modal-body span:hover {
+    cursor: pointer;
+    color: #709E32;
+}
+
+.modal-body h4 {
+    line-height: 2.5em;
+    text-align: justify;
+}
+
+.close {
+    opacity: 0.6;
+}
