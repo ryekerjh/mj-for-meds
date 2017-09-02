@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway');
 
 /* UNIVERSALS */
 a {
@@ -11,20 +11,15 @@ a:hover {
     transition: all 0.2s ease-in-out;
 }
 
-/* BODY STYLES */
 body {
-    height: 100vh;
-    background-color: #333;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
-.body-wrapper {
-    background-image: url('../img/bg2.jpg'); 
-    height: 100%;
-    animation: fade-in 6s ease-in-out forwards;
+header {
+    background-image: url('../img/bg3.jpg');
+    background-position: bottom;
     background-size: cover;
-    background-position: center;
-    color: #fff;
+    height: 500px;
 }
 
 .design-select {
@@ -33,81 +28,62 @@ body {
     right: 10px;
 }
 
-/* HEADER STYLES */
-
-nav {
-    height: 100%; 
+.testimony-section {
+    min-height: 650px;
 }
 
-nav>ul {
-    height: 100%;
-    list-style-type: none;
-    background-color: rgba(40, 56, 55, .8);
-    animation: slide-down 2s ease-in 4s forwards;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.heading {
+    margin-top: 10%;
+    color: #fff;
 }
 
-nav li {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.heading h2 {
+    font-size: 4em;
 }
 
-nav li:hover {
-    background-color: rgba(40, 56, 55, .95);
-    color: #e7e7e7;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+.heading h3 {
+    margin-top: 0;
 }
 
-nav ul a {
-    text-shadow: 3px 3px 3px #333;
-    font-size: 2em;
-    letter-spacing: 1px;
-    animation: fade-in 2s ease-in 4s forwards;
+.separator {
+    color: #333;
+    height: 3px;
 }
 
-/* TESTIMONY STYLES */
+.separator:first-child {
+    margin-top: 10%;
+}
+
+.separator~h4, p {
+    font-family: 'Raleway', cursive;
+}
+
 .testimony {
-    opacity: 0;
-    background-color: rgba(40, 56, 55, .8);
-    margin-top: 16%;
-    padding: 2.5% 2% 1%;
-    border-radius: 8px;
-    animation: fade-in 2s ease-in 4s forwards;
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 2px #e7e7e7;
+    padding: 24px;
 }
 
-.testimony h4 {
-    font-family: 'Sacremento', cursive;
-    margin-bottom: 0;
+/* MODAL STYLES */
+.modal {
+    padding-top: 8%;
 }
 
-/* ANIMATIONS */
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-        transform: scale(2); 
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1); 
-    }
+.modal-body h4 {
+    line-height: 2.5em;
+    text-align: justify;
 }
 
-@keyframes slide-down {
-    0% {
-        height: 0px;
-    }
+.close {
+    opacity: 0.6;
+}
 
-    100% {
-        height: 100px;
-    }
+.build-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

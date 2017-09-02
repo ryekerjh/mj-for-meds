@@ -9,26 +9,49 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="body-wrapper">
-        <button class="design-select btn"><a href="second-design.html">View Next Design</a></button>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header class="container-fluid">
         <div class="row">
-            <div class="testimony col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                <p id="testimonies">Please excuse our mess. We are building a world-class experience for you. For now, please read some words from our clients.</p>
-                <h4 class="author">-<span id="author"></span></h4>
-                <h4 class="author">customer since <span id="custSince"></span></h4>
+            <div class="col-sm-6 col-sm-offset-3 heading">
+                <h2>MJ 4 Meds</h2>
+                <h3>Feel Better. Naturally.</h5>
+            </div>
+        </div>
+    </header>
+    <div class="testimony-section container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <hr class="separator"><h4 class="text-uppercase text-center">testimonials</h4><hr class="separator">
+            </div>
+        </div>
+        <div class="row">
+            <div class="testimony col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                <h4 id="testimonies"></h4>
+                <p class="author">-<span id="author">/span></p>
+                <p class="author">customer since <span id="custSince">1999</span></p>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="loadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="build-icon center-block">
+                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+                    </svg>
+                </div>
+                <h4>Please excuse our mess! We are hard at work building a world-class online experience for you. In the meantime, please read our testimonials below. You can always contact us at ______@___.com. Talk to you soon!</h4>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal Ends -->
     <!--DEV BRANCH  -->
-    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 </body>
